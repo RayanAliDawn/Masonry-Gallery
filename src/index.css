@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.my-masonry-grid {
+  display: flex;
+  margin-left: 30px; /* gutter size offset */
+  width: 55%;
+  margin-left: 17%;
+  margin-right: 12%;
+  margin-top: 0%;
+ 
+  
+}
+.my-masonry-grid_column {
+  padding-left: 30px; /* gutter size */
+  background-clip: padding-box;
+}
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 10px;
+  
+}
+
+.head{
+  
+  
+  width: 100%;
+  margin-top: 5%;
+  padding-left: 25%; /* gutter size */
+  padding-right: 30%;
+  margin-bottom: 13%;
+ 
+  
+}
+img{
+  border-radius: 1rem;
+}
+img:hover{
+  transform: scale(1.09);
+}
+
+
+.que{
+  text-align: center;
+}
