@@ -20,9 +20,11 @@ function App() {
   };
 
   const breakpointColumnsObj = {
-    default: 4,
-    1100: 2,
-    700: 1,
+    default: 5,
+    1100: 4,
+    740: 3,
+    320:2,
+    200:1
   };
 
   return (
@@ -52,8 +54,8 @@ function App() {
       <h1 className="que">{query}</h1>
       <Masonry
         breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
+        className="my-masonry-grid my-masonry-grid_column"
+       
       >
         {images.map((img, key) => (
           <Image src={img.urls.thumb} key={key} />
