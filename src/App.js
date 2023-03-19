@@ -31,10 +31,10 @@ function App() {
     < >
     
     
-      <div className="flex  " >
-        <div>
+      <div className="flex gap-10 " >
+        <div className="w-full" > 
         <input  type="text"
-          className="xs:w-40 ss:w-64 sm:w-80  md:w-600 lg:w-1000 xl:w-1400  h-10 my-5 mx-2  p-2 border rounded-lg border-slate-900 text-sm "
+          className="w-full h-10 my-5 mx-2  p-2 border rounded-lg border-slate-900 text-sm "
           placeholder="Search for images here"
           aria-label="Recipient's username"
           aria-describedby="button-addon2"
