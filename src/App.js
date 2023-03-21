@@ -1,7 +1,7 @@
 import { LoadImages, SearchImages } from "./Api";
 import Image from "./Image";
 import { useState, useEffect } from "react";
-import Masonry from "react-masonry-css";
+
 
 function App() {
   const [query, setQuery] = useState("");
@@ -19,50 +19,44 @@ function App() {
     });
   };
 
-  const breakpointColumnsObj = {
-    default: 5,
-    1100: 4,
-    740: 3,
-    320:2,
-    200:1
-  };
 
   return (
     < >
     
-    
-      <div className="flex gap-10 " >
-        <div className="w-full" > 
+    <div className="laptop:mx-48 laptop:my-10 tablet:mx-3 ">
+      <div className="flex gap-3 " >
+        
         <input  type="text"
-          className="w-full h-10 my-5 mx-2  p-2 border rounded-lg border-slate-900 text-sm "
+          className="w-full h-10 my-5 mx-2  p-2 border rounded-lg  "
           placeholder="Search for images here"
-          aria-label="Recipient's username"
-          aria-describedby="button-addon2"
           value={query}
           onChange={(event) => setQuery(event.target.value)}/>
-        </div>
-<div>
+        
+
 <button className="hover  hover:bg-red-700 bg-black w-fit h-10 mt-12   p-2 text-white rounded-lg cursor-pointer "
           onClick={searchImages}
         >
+          
           Search
         </button>
-</div>
+
         
       </div>
-      
-      <h1 className="que">{query}</h1>
-      <Masonry
-        breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid my-masonry-grid_column"
+      <span>
+      <h6 className="text-center text-base">{query}</h6>
+      </span>
+     
+      <div 
+        
+        className="columns tablet:columns-2 laptop:columns-3 desktop:columns-4"
        
       >
         {images.map((img, key) => (
           <Image src={img.urls.thumb} key={key} />
         ))}
-      </Masonry>
+      </div>
      
-      
+      </div>
     </>
     
   );

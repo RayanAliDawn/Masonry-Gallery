@@ -2,7 +2,7 @@ import React from "react";
 
 const Image = (props) => {
   return (
-    <div >
+    <div className="w-full" >
       <img src={props.src} alt="" />
     </div>
   );
